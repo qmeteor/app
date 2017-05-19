@@ -1,0 +1,90 @@
+.button {
+  background-color: #2A5DB0;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: $base-font-size;
+  margin-bottom: 1.4rem;
+  padding: 1rem;
+  text-transform: uppercase;
+
+}
+
+.x {
+  float:right;
+  position:relative;
+  margin:3px 3px 3px 3px;
+  padding:5px;
+  overflow:hidden;
+  background:none;
+  border: none;
+  //border-radius:2px;
+  //border:solid 2px #ddd;
+  transition: all .3s ease-out;
+  cursor:pointer;
+  color: lightgrey;
+}
+
+.x.medium {
+  width:20px;
+  height:20px;
+}
+
+.x.shift:hover{
+  transition: all 150ms ease;
+  color: #2A5DB0;
+}
+
+button.login {
+background:none!important;
+color:inherit;
+border:none;
+padding:0!important;
+font: inherit;
+color: #2A5DB0;
+/*border is optional*/
+border-bottom: 0.1em solid lightgrey;
+cursor: pointer;
+}
+
+button.login:hover {
+  border-bottom: 0.1em solid #2A5DB0;
+  transition: all 350ms ease;
+}
+
+.resetPassword {
+  position: absolute;
+  right: 0px;
+  margin-right: 20px;
+  background:none!important;
+  border:none;
+  padding:0!important;
+  font: inherit;
+  color: #2A5DB0;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.terms {
+  background:none!important;
+  color:inherit;
+  border:none;
+  padding:0!important;
+  font: inherit;
+
+  /*border is optional*/
+
+  cursor: pointer;
+}
+
+button.terms:hover {
+  color: #2A5DB0;
+  transition: all 100ms ease;
+}
+
+button:focus {
+  outline: none;
+}
