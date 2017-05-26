@@ -3361,6 +3361,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/index.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/is-object.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/lookup-getter.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tmeasday_check-npm-versions/0.2.0/npm/node_modules/semver/semver.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/freeze.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/make.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/create.js" />
@@ -8431,6 +8432,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/index.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/is-object.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/lookup-getter.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tmeasday_check-npm-versions/0.2.0/npm/node_modules/semver/semver.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/freeze.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/make.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/npm/node_modules/core-js/library/fn/object/create.js" />

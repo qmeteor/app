@@ -3,28 +3,15 @@
  */
 import React from 'react'
 
-import TitleBar from './TitleBar';
-import Body from './Body';
+import PrivateHeader from './PrivateHeader';
 
-export default class App extends React.Component {
-
-    constructor(props) {
-        super(props);
-
-        this.state = {
-            error: '',
-        };
-    }
-
-    render() {
-        //let title = 'Beanster'; //fuse between video, questions, and forum.
-        //let subtitle = 'Share your knowledge with friends through original content';
-
+export default () => {
         return (
             <div>
-                <TitleBar/>
-
+                <PrivateHeader title="Beanster"/>
+                <div className="page-content">
+                    Body Content
+                </div>
             </div>
         );
-    }
-}
+};

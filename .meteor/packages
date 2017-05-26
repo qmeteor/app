@@ -24,3 +24,5 @@ twbs:bootstrap
 session
 accounts-base
 accounts-password
+meteorhacks:ssr
+react-meteor-data@0.2.9

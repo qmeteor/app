@@ -9,14 +9,13 @@ import { Router, Route, browserHistory } from 'react-router'; //v3
 
 /* Custom imports */
 import App from './../ui/App';
-import AnswerList from '../ui/QuestionList';
 import Signup from '../ui/login/Signup';
 import Link from '../ui/login/Link';
 import NoMatch from '../ui/login/NoMatch';
 import ForgotPassword from '../ui/login/ForgotPassword';
 import CheckEmail from '../ui/login/CheckEmail';
 import ResetPassword from '../ui/login/ResetPassword';
-import Upload from '../ui/login/Upload';
+
 /*******************/
 
 const unauthenticatedPages = ['/', '/signup', '/reset-password'];
@@ -36,6 +35,16 @@ const onEnterPrivatePage = () => {
     if(!Meteor.userId()) {
         browserHistory.replace('/');
     }
+};
+
+const onEnterMainPage = (nextState) => {
+    console.log(nextState.location.pathname);
+    Session.set('selectedHeaderItem', nextState.location.pathname);
+    // if(Meteor.userId()) {
+    //     browserHistory.replace('/');
+    // } else {
+    //
+    // }
 };
 
 export const onAuthChange = (isAuthenticated) => {
@@ -64,14 +73,16 @@ export const onAuthChange = (isAuthenticated) => {
 
 export const routes = (
   <Router history={browserHistory}>
-      <Route exact path="/" component={App} onEnter={onEnterPublicPage}/>
-      <Route path="/answer" component={AnswerList}/>
-      <Route path="/signup" component={Signup} oneEnter={onEnterPublicPage}/>
+      <Route exact path="/" component={App}/>
+      <Route path="/signup" component={Signup} onEnter={onEnterPublicPage}/>
       <Route path="/links" component={Link} onEnter={onEnterPrivatePage} />
       <Route path="/resetpassword" component={ForgotPassword} />
       <Route path="/checkemail" component={CheckEmail} />
       <Route path="/reset-password/:token" component={ResetPassword} />
-      <Route path="/upload" component={Upload} />
+      <Route path="/watch" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/respond" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/notifications" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/profile" component={App} onEnter={onEnterMainPage}/>
       <Route path="*" component={NoMatch}/>
   </Router>
 );

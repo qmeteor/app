@@ -96,6 +96,7 @@
         <item url="file://$USER_HOME$/.meteor/packages/promise/0.8.8/web.browser/client.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/exceptions.js" />
         <item url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.11/web.browser/tokenize.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/tmeasday_check-npm-versions/0.2.0/web.browser/check-npm-versions.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/attrs.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/backcompat.js" />
         <item url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/events.js" />
@@ -168,7 +169,10 @@
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging_test.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging.js" />
         <item url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging_cordova.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/ReactMeteorData.jsx" />
         <item url="file://$USER_HOME$/.meteor/packages/session/1.1.7/web.browser/session.js" />
+        <item url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/react-meteor-data.jsx" />
+        <item url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/createContainer.jsx" />
         <item url="file://$USER_HOME$/.meteor/packages/diff-sequence/1.0.7/web.browser/diff.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/web.browser/runtime-tests.js" />
         <item url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/web.browser/runtime.js" />
@@ -275,6 +279,7 @@
       <root url="file://$USER_HOME$/.meteor/packages/promise/0.8.8/web.browser/client.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/exceptions.js" />
       <root url="file://$USER_HOME$/.meteor/packages/html-tools/1.0.11/web.browser/tokenize.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/tmeasday_check-npm-versions/0.2.0/web.browser/check-npm-versions.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/attrs.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/backcompat.js" />
       <root url="file://$USER_HOME$/.meteor/packages/blaze/2.3.2/web.browser/events.js" />
@@ -347,7 +352,10 @@
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging_test.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging.js" />
       <root url="file://$USER_HOME$/.meteor/packages/logging/1.1.17/web.browser/logging_cordova.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/ReactMeteorData.jsx" />
       <root url="file://$USER_HOME$/.meteor/packages/session/1.1.7/web.browser/session.js" />
+      <root url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/react-meteor-data.jsx" />
+      <root url="file://$USER_HOME$/.meteor/packages/react-meteor-data/0.2.11/web.browser/createContainer.jsx" />
       <root url="file://$USER_HOME$/.meteor/packages/diff-sequence/1.0.7/web.browser/diff.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/web.browser/runtime-tests.js" />
       <root url="file://$USER_HOME$/.meteor/packages/ecmascript-runtime/0.3.15/web.browser/runtime.js" />
