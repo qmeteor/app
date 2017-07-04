@@ -1,0 +1,21 @@
+{
+  "definitions": {
+    "site": true
+//    "accordion": true,
+//    "ad": true,
+//    "api": true,
+    /* etc */
+  },
+  "themes":
+//    "amazon": false,
+    "basic": true,
+//    "bookish": false,
+//    "bootstrap3": false,
+//    "chubby": false,
+//    "classic": false,
+    "default": true
+    /* etc */
+  }
+}
+
+//TODO: remember to clean up atmosphere packages for semantic ui to only include the items you need.

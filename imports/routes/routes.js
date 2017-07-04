@@ -18,8 +18,8 @@ import ResetPassword from '../ui/login/ResetPassword';
 
 /*******************/
 
-const unauthenticatedPages = ['/', '/signup', '/reset-password'];
-const authenticatedPages = ['/links'];
+const unauthenticatedPages = ['/', '/profile', '/videos', '/questions', '/notifications', '/reset-password', '/avatar', '/channels', '/messages', '/stats', '/settings' ];
+const authenticatedPages = ['/', '/profile', '/videos', '/questions', '/notifications', '/reset-password', '/avatar', '/channels', '/messages', '/stats', '/settings'];
 const forgotPasswordPages = ['resetpassword'];
 
 
@@ -38,13 +38,19 @@ const onEnterPrivatePage = () => {
 };
 
 const onEnterMainPage = (nextState) => {
-    console.log(nextState.location.pathname);
+    //console.log(nextState.location.pathname);
     Session.set('selectedHeaderItem', nextState.location.pathname);
+    Session.set('selectedDropDownItem', nextState.location.pathname);
+
     // if(Meteor.userId()) {
     //     browserHistory.replace('/');
     // } else {
     //
     // }
+};
+
+const onEnterDropDown = (nextState) => {
+    Session.set('selectedDropDownItem', nextState.location.pathname);
 };
 
 export const onAuthChange = (isAuthenticated) => {
@@ -57,12 +63,12 @@ export const onAuthChange = (isAuthenticated) => {
         // var stateObj = { foo: "bar" };
         // history.pushState(undefined, "links", "/links");
         // location.reload();
-        browserHistory.push('/links');
+        browserHistory.replace('/videos');
     } else if (isAuthenticatedPage && !isAuthenticated) {
         // var stateObj = { foo: "bar" };
         // history.pushState(undefined, "home", "/");
         // location.reload();
-        browserHistory.push('/');
+        browserHistory.replace('/');
     }
 
     // If on unauthenticated page and logged in, redirect to /links
@@ -73,21 +79,24 @@ export const onAuthChange = (isAuthenticated) => {
 
 export const routes = (
   <Router history={browserHistory}>
-      <Route exact path="/" component={App}/>
-      <Route path="/signup" component={Signup} onEnter={onEnterPublicPage}/>
+      <Route exact path="/" component={App} onEnter={onEnterMainPage}/>
       <Route path="/links" component={Link} onEnter={onEnterPrivatePage} />
       <Route path="/resetpassword" component={ForgotPassword} />
       <Route path="/checkemail" component={CheckEmail} />
       <Route path="/reset-password/:token" component={ResetPassword} />
-      <Route path="/watch" component={App} onEnter={onEnterMainPage}/>
-      <Route path="/respond" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/videos" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/questions" component={App} onEnter={onEnterMainPage}/>
       <Route path="/notifications" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/avatar" component={App} onEnter={onEnterMainPage}/>
       <Route path="/profile" component={App} onEnter={onEnterMainPage}/>
-      <Route path="*" component={NoMatch}/>
+      <Route path="/channels" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/messages" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/stats" component={App} onEnter={onEnterMainPage}/>
+      <Route path="/settings" component={App} onEnter={onEnterMainPage}/>
+      {/*<Route path="*" component={NoMatch}/>*/}
+      <Route path="*" component={App} onEnter={onEnterMainPage}/>
   </Router>
 );
-
-// window.browserHistory = browserHistory; // console display
 
 // onEnterPrivatePage - check if user is not logged in. If they're not, redirect to /
 Tracker.autorun(() => {
@@ -97,20 +106,10 @@ Tracker.autorun(() => {
     const isAuthenticatedPage = authenticatedPages.includes(pathname);
 
     if (isUnauthenticatedPage && isAuthenticated) {
-        // var stateObj = { foo: "bar" };
-        // history.pushState(undefined, "links", "/links");
-        // location.reload();
-        browserHistory.push('/links');
+        browserHistory.replace('/videos');
     } else if (isAuthenticatedPage && !isAuthenticated) {
-        // var stateObj = { foo: "bar" };
-        // history.pushState(undefined, "home", "/");
-        // location.reload();
-        browserHistory.push('/');
+        browserHistory.replace('/');
     }
-    // If on unauthenticated page and logged in, redirect to /links
-    //history.push
-    // If on authenticated page and not logged in, redirect to /
-    //history.push
     console.log('isAuthenticated', isAuthenticated);
 });
 

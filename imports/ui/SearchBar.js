@@ -21,19 +21,22 @@ export default class SearchBar extends React.Component {
 
     onSubmit(e) {
         e.preventDefault();
-        alert("button test");
+        if(true) {
+            alert('Signup or Login to ask');
+        }
     }
 
     handleModal(e) {
-        alert("test");
+        if(true) {
+            alert("Signup or Login to search");
+        }
     }
 
     render() {
       return (
-
           <form className="input-group">
                   <input
-                placeholder="Ask or Search NoName"
+                placeholder="Search..."
                 className="form-control"
                 value={this.state.term}
                 onChange={this.onInputChange}
@@ -44,11 +47,10 @@ export default class SearchBar extends React.Component {
                       type="submit"
                       className="btn btn-default"
                       onClick={this.onSubmit}
-                  >Ask Question
+                  >Search
                   </button>
               </span>
           </form>
-
       );
     }
 }

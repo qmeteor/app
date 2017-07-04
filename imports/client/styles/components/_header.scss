@@ -1,0 +1,84 @@
+.header {
+  //background: $header-bg;
+  //color: $header-color;
+  -webkit-box-shadow: 0 3px 6px -6px #222;
+  -moz-box-shadow: 0 3px 6px -6px #222;
+  box-shadow: 0 3px 6px -6px #222;
+  border-top: 2px solid $green;
+  border-bottom: thin solid lightgrey;
+}
+
+.header__content {
+  display: flex; //position left to right
+  justify-content: space-between;
+  max-width: $site-max-width;
+  margin: 0 auto; //top and bottom is 0 and right left is auto
+}
+
+.avatar_wrapper {
+  margin: 0;
+  padding: 0 10px;
+  text-decoration: blink;
+  background: none;
+  border: none;
+  border-bottom: $item-border-height solid transparent;
+  text-transform: none;
+  transition: background-color .1s ease, border-bottom .1s ease;
+  height: 50px; // this is only for 'signup' button for some reason.
+}
+
+.login_wrapper {
+  height: 50px;
+}
+
+.logo_wrapper {
+  margin: auto 0;
+}
+
+.logo {
+  height: 50px;
+  width: 120px;
+}
+
+.search_wrapper {
+  margin: auto 0;
+  padding: 0 10px;
+
+}
+
+.form-control {
+  min-width: 200px;
+  background-color: #dddddd;
+}
+
+.button--link-text {
+  margin: 0;
+  padding: 0 10px;
+  text-decoration: blink;
+  background: none;
+  border: none;
+  border-bottom: $item-border-height solid transparent;
+  text-transform: none;
+  transition: background-color .1s ease, border-bottom .1s ease;
+  height: 50px; // this is only for 'signup' button for some reason.
+}
+
+.selected {
+  color: $green;
+  background-color: transparent;
+  opacity: 0.8;
+  border-bottom: $item-border-height solid $green;
+}
+
+.notification {
+  padding: 8px 8px 8px 25px;
+  background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABIAAAAYCAYAAAD3Va0xAAABgUlEQVQ4T9XUvUtWYRjH8Y+RhC4VgeQfoM6BERUKNSSIoCFCi9HQEBUURSAiQvQyRSAoFg5uOjQIIr2ADVZEc0NDRGOD4eAgGATFFfeBw8M5z3l8WbqWwznnd3/v673JPllTA5xjOICf9bRVoG4sohmjeF8GqwKN4wdacRyTuwU9xlEcwgbu7RTUgecJ8CkdPo1tXMPXWmBRaF1YxnW8xQW04BV6MYtBfMnDikAfMIZ4hvXhMiLxIynUJzhZD3QCDzBQkIvwZh6heYH7+Jjpaj26iiOIG4vsKb4lzRamykC38AvPSkA9OJWSfhiPykC3k6gMlJ27mbx6+P+AIqQ3WKoY5kvoT23xT5qv2hDu4Dx+V4BiiNcwjYU8qDN5cQ7rDayWkLTjHYbxOfPoBg7m+6JB2F1EG0xmoChn9EfM1k4s5vA7JjLQWVysIUSH/8Fm+l77nslX8breYovkX8ldsIIZvCxyuR4o/s3hTKpuVCl2UaFVrdo41JZC3NPybzjxfwF9oEYZR5N2twAAAABJRU5ErkJggg==);
+  background-position: 2px 12px;
+  background-repeat: no-repeat;
+}
+
+.button--link-text:hover {
+  background-color: whitesmoke;
+  opacity: 0.8;
+  //border-bottom: $item-border-height solid $green;
+}

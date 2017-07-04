@@ -1,0 +1,48 @@
+{
+  "_id": "HupkF5AcEZSTxLQ27",
+  "createdAt": ISODate
+  (
+  "2017-05-30T09:59:23.462Z"
+  ),
+  "services": {
+    "password": {
+      "bcrypt": "$2a$10$fd8uRnCfzBoC6P93EZwtZek7CaDXy9R5rx0Ug2X9tY22q8/OMLY4S"
+    },
+    "resume": {
+      "loginTokens": []
+    }
+  },
+  "username": "Bien",
+  "emails": [
+    {
+      "address": "pham_bv@hotmail.com",
+      "verified": false
+    }
+  ],
+  "profile": {},
+  "roles": [
+    "User"
+  ],
+  "type": null,
+  "etag": null,
+  "profileImageUrl": null,
+  "first_name": null,
+  "last_name": null,
+  "headline": null,
+  "headline_description": null,
+  "position": null,
+  "company_organization": null,
+  "start_year": null,
+  "end_year": null,
+  "I_currently_work_here": null,
+  "school": null,
+  "major": null,
+  "minor": null,
+  "degree_type": null,
+  "graduation_year": null,
+  "topic": null,
+  "experience": null,
+  "location": null,
+  "since_year": null,
+  "current": false
+}

@@ -303,7 +303,7 @@ legend {
   box-sizing: border-box; /* 1 */
   color: inherit; /* 2 */
   display: table; /* 1 */
-  max-width: 100%; /* 1 */
+  max-width: 100px; /* 1 */
   padding: 0; /* 3 */
   white-space: normal; /* 1 */
 }
@@ -489,6 +489,8 @@ template {
   text-decoration: underline;
 }
 .dropdown {
+ //TODO: CSS hack to shift dropdown. Probably not correct.
+  padding-top: 15px;
   display: inline-block;
 }
 .dropdown__content {
@@ -515,9 +517,10 @@ template {
 .account-dropdown__avatar,
 .account-dropdown__name {
   vertical-align: middle;
+  width: 40px;
 }
 .account-dropdown .dropdown__content {
-  margin-top: 5px;
+  margin-top: 16px;  //TODO: HACKED TO SHIFT DROPDOWN TO SUITABLE HEIGHT.
   border-top: rgba(0, 0, 0, 0.05) 1px solid;
   background: #ffffff;
   box-shadow: 0 5px 8px rgba(0, 0, 0, 0.15);
@@ -528,21 +531,40 @@ template {
   margin: 0;
   padding: 0;
 }
+div.account-dropdown__segment {
+  padding: 5px 20px;
+}
 .account-dropdown__segment {
-  padding: 10px 15px;
+  padding: 10px 0;
   border-bottom: #e1e1e1 1px solid;
 }
 .account-dropdown__link {
   margin: 5px 0;
+  padding: 3px 20px;
+}
+
+.account-dropdown__link:hover {
+  background-color: #f1f1f1;
 }
 .code {
   border: #ebebeb 1px solid;
 }
 
 .account-dropdown__link a:hover {
-  background-color: #f1f1f1;
-
 }
+
+.account-dropdown {
+  z-index: 100000;
+}
+
+.account-dropdown-content {
+  min-width: 200px;
+}
+
+a.dropdown__trigger{
+  margin: auto 0;
+}
+
 
 
 

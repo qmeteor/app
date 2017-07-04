@@ -5,10 +5,13 @@ import React from 'react';
 import { Link } from 'react-router'; // v3
 import { Meteor } from 'meteor/meteor';
 import ReactModal from 'react-modal';
+import { Session } from 'meteor/session';
 import Signup from './Signup';
+import PropTypes from 'prop-types';
 
+import { createContainer } from 'meteor/react-meteor-data';
 
-export default class Login extends React.Component {
+export class Login extends React.Component {
     constructor(props) {
         super(props);
 
@@ -24,10 +27,17 @@ export default class Login extends React.Component {
     }
 
     handleOpenModal() {
-        this.setState({
-            modalOverlayClass: "modal-view-overlay fadein",
-            showModal: true
-        });
+        //TODO: requires server side validation as to whether you can open this modal.
+        if(!Meteor.userId()) {
+            this.props.Session.set('selectedHeaderItem', '/avatar');
+            console.log('avatar');
+            this.setState({
+                modalOverlayClass: "modal-view-overlay fadein",
+                showModal: true
+            });
+        } else {
+            alert("please login");
+        }
     }
     //TODO: updates className but UI overlay does not fadeout, I think it has to do with lifecycle state "didcomponentmount"?
     handleCloseModal() {
@@ -49,18 +59,24 @@ export default class Login extends React.Component {
             } else {
                 this.setState({error: ''});
             }
-            //console.log('Login callback', err);
         });
     }
 
     render() {
         //console.log("state: " + this.state.modalOverlayClass)
-        return (
-            <div className="boxed-view">
-                <div className="boxed-view__box">
 
-                    <button className="btn-link" onClick={() => this.handleOpenModal()}>
-                        Log in or sign up
+
+        let classNameAvatar = 'button--link-text';
+
+        if (this.props.Session.get('selectedHeaderItem') === '/avatar') {
+            classNameAvatar = 'button--link-text selected';
+        }
+        //console.log(classNameAvatar);
+
+        return (
+            <div className="login_wrapper">
+                    <button className={classNameAvatar} onClick={() => this.handleOpenModal()}>
+                        Login
                     </button>
 
                     <ReactModal
@@ -99,13 +115,24 @@ export default class Login extends React.Component {
                             <p className="termsofservice">By clicking <button className="terms">Create Account</button>, you agree to our Terms and that you have read our <button className="terms">Data Policy</button> and Content Policy.</p>
                         </footer>
                     </ReactModal>
-
-                </div>
-                <div>
-
-                </div>
             </div>
 
         );
     }
 }
+
+Login.propTypes = {
+    selectedHeaderItem: PropTypes.string,
+    classNameAvatar: PropTypes.string.isRequired,
+    Session: PropTypes.object.isRequired
+}
+
+
+export default createContainer(() => {
+    const selectedHeaderItem = Session.get('selectedHeaderItem');
+
+    return {
+        selectedHeaderItem,
+        Session,
+    }
+}, Login);

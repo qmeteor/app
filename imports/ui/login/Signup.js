@@ -2,10 +2,7 @@
  * Created by Bien on 2017-03-24.
  */
 import React from 'react';
-//import { Link } from 'react-router'; // v3
 import { Accounts } from 'meteor/accounts-base';
-//import { Link } from 'react-router-dom'; // v4
-//import Modal from 'react-modal';
 
 
 export default class Signup extends React.Component {
@@ -38,19 +35,19 @@ export default class Signup extends React.Component {
             return this.setState({error: 'Must have username'})
         }
 
+        if (username.length < 4) {
+            return this.setState({error: 'Username must have minimum of 4 characters'})
+        }
+
         Accounts.createUser({username, email, password}, (err) => {
-            console.log(err)
             if (err) {
+                console.log('createUser', err);
                 this.setState({error: err.reason});
             } else {
                 this.setState({error: ''});
+                console.log('createUser on client success');
             }
-            //console.log('Signup callback', err);
         });
-
-        // this.setState({
-        //    error: 'Something went wrong.'
-        // });
     }
 
     render() {

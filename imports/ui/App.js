@@ -4,13 +4,14 @@
 import React from 'react'
 
 import PrivateHeader from './PrivateHeader';
+import MainContents from './MainContent';
 
 export default () => {
         return (
             <div>
                 <PrivateHeader title="Beanster"/>
                 <div className="page-content">
-                    Body Content
+                    <MainContents/>
                 </div>
             </div>
         );

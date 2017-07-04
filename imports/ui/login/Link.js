@@ -4,7 +4,7 @@
 import React from 'react';
 import { Accounts } from 'meteor/accounts-base';
 import { Links } from './../../api/links';
-import DropDown from './DropDown';
+import DropDown from '../avatar/DropDown';
 
 export default class Link extends React.Component {
     constructor (props) {
